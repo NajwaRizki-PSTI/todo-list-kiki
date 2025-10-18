@@ -1,0 +1,137 @@
+body {
+    min-height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(180deg, #cfe9ff, #e8d7ff);
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 420px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: black;
+}
+
+form {
+    background-color: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 6px 18px black;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+input[type="text"]{
+    width: 100%;
+    padding: 10px;
+    border: 1px solid rgb(33, 25, 25);
+    border-radius: 6px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+input[type="text"]:focus{
+    outline: none;
+    border-color: blue;
+}
+
+button[type="submit"]{
+    background: blue;
+    color: white;
+    border: none;
+    padding: 10px 14px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover{
+    background: rgb(0, 179, 255);
+}
+
+#errorMessage{
+    color: red;
+    font-size: 16px;
+    display: block;
+    height: 16px;
+}
+
+#daftar{
+    list-style: none;
+    padding-left: 0;
+    margin-top: 0;
+    width: 100%;
+}
+
+#daftar li{
+    display: flex;
+    padding: 10px 12px;
+    justify-content: space-between;
+    align-items: center;
+    color: black;
+    margin-bottom: 10px;
+    border-radius: 6px;
+    background: white;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    transition: transform 0.2s ease, opacity 0.3s ease;
+}
+
+#daftar li:hover {
+    transform: scale(1.02);
+}
+
+.completed .text {
+    text-decoration: line-through;
+    color: grey;
+    opacity: 0.7;
+}
+
+.edit .hapus {
+    padding: 6px 10px;
+    border-radius: 50px;
+    color: black;
+    cursor: pointer;
+    font-size: 13px;
+    transition: background 0.3s ease;
+}
+
+.edit {
+    background-color: rgb(0, 157, 255);
+    margin-right: 6px;
+    border-radius: 6px;
+}
+
+.edit:hover{
+    background-color: rgb(134, 134, 223);
+}
+
+.hapus {
+    background-color: rgb(239, 110, 110);
+    border-radius: 6px;
+}
+
+.hapus:hover {
+    background-color: rgb(195, 115, 115);
+}
+
+.item {
+    animation: fadeIn 0.3s ease forwards;
+}
+
+@keyframes fadeIn {
+    from {opacity: 0; transform: translateY(-5px);}
+    to {opacity: 1; transform: translateY(0);}
+}
